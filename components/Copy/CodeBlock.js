@@ -1,4 +1,5 @@
 import styles from './CodeBlock.module.css';
+import Image from 'next/image';
 import { useCopytoClipboard } from '../../hooks/useCopytoClipboard';
 
 export default function CodeBlock({ block }) {
@@ -15,7 +16,12 @@ export default function CodeBlock({ block }) {
         onClick={() => copyToClipboard(block.code)}
         className={copied ? `${styles.copyBtn} ${styles.copied}` : `${styles.copyBtn}`}
       >
-        <img src={copied ? 'images/check.svg' : 'images/copy.svg'} alt='Copy to Clipboard' />
+        <Image
+          src={copied ? '/images/check.svg' : '/images/copy.svg'}
+          alt='Copy to Clipboard'
+          width={35}
+          height={35}
+        />
       </button>
     </article>
   );

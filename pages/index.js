@@ -1,11 +1,10 @@
 import Head from 'next/head';
-import styles from '../components/resources/Resources.module.css';
+import styles from '../components/Resources/Resources.module.css';
 import { useState, useEffect } from 'react';
 import { db } from '../firebase/config';
 import { collection, getDocs, query, onSnapshot, orderBy } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
 import { useUser } from '../hooks/useUser';
-import Header from '../components/Header/Header';
 import ResourceCard from '../components/Resources/ResourceCard';
 import AddCategoryForm from '../components/Resources/AddCategoryForm';
 import Login from '../components/Login/Login';
@@ -19,7 +18,7 @@ export default function Home({ resources }) {
     if (resources) {
       setData(resources);
     }
-  }, []);
+  }, [resources]);
 
   useEffect(() => {
     // realtime listener

@@ -1,4 +1,5 @@
 import styles from './Header.module.css';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useUser } from '../../hooks/useUser';
@@ -19,7 +20,13 @@ export default function Header() {
         <ul className={styles.navigation}>
           <li>
             <Link href='/'>
-              <img className={styles.homeIcon} src='./images/home.svg' alt='Go back home.' />
+              <Image
+                className={styles.homeIcon}
+                src='/images/home.svg'
+                alt='Go back home.'
+                width={35}
+                height={40}
+              />
             </Link>
           </li>
           <li>
