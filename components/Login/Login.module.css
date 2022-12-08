@@ -1,0 +1,84 @@
+.loginModal {
+  position: fixed;
+  top: 0;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  width: 100%;
+  border: none;
+  background: linear-gradient(to top, #6975fc, var(--primary));
+  box-shadow: 4.5px 4.5px 5.2px rgba(0, 0, 0, 0.07), 12.5px 12.5px 14.3px rgba(0, 0, 0, 0.046),
+    30.1px 30.1px 34.4px rgba(0, 0, 0, 0.035), 100px 100px 114px rgba(0, 0, 0, 0.024);
+  overflow: hidden;
+}
+
+.loginModal form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--white);
+  padding: 2rem;
+  width: 300px;
+  border-radius: var(--borderRadius);
+  box-shadow: 15px 20px 50px -20px rgb(34 34 34 / 70%);
+}
+
+.loginModal input {
+  width: 100%;
+}
+
+.loginModal p {
+  font-size: 0.9rem;
+  color: red;
+}
+
+.submitBtn {
+  position: relative;
+  color: var(--textColor);
+  font-weight: var(--bold);
+  text-align: center;
+  line-height: 105%;
+  border-radius: var(--borderRadius);
+  width: 100%;
+  min-width: 120px;
+  height: 50px;
+  padding: 0 10px;
+  box-shadow: 10px 15px 25px -20px rgb(92, 92, 92);
+}
+
+.btnShadow {
+  position: absolute;
+  background: var(--textColor);
+  height: 100%;
+  width: 100%;
+  border-radius: var(--borderRadius);
+  bottom: -4px;
+  right: -3px;
+}
+
+.btnFront {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: var(--borderRadius);
+  background-color: var(--background);
+  border: 3px solid var(--textColor);
+  transition: 75ms ease-in;
+}
+
+.btnFront:hover {
+  transform: translateY(-2px) translateX(-2px);
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btnFront:active {
+  outline: none;
+  transform: translateY(3px) translateX(2px);
+}

@@ -1,26 +1,114 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --primary: #3e50ef;
+  --textColor: #1e1e1e;
+  --background: #f9f9f9;
+  --white: #f9f9f9;
+  --bold: 900;
+  --xl: 3.625rem;
+  --lg: 2rem;
+  --med: 1.35rem;
+  --borderRadius: 8px;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+html,
+body {
+  height: 100vh;
+  /* allows 100vh to work properly on android phones, while still applying the fill available fix on ios */
+  max-height: -webkit-fill-available;
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+}
+
+a,
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+input {
+  border: 1px solid #dfdfdf;
+  border-radius: var(--borderRadius);
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+  color: var(--textColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2 {
+  line-height: 1.3;
+}
+
+p {
+  max-width: 60ch;
+}
+
+img {
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+}
+
+.skip-to-content-link {
+  position: absolute;
+  background: var(--primary);
+  color: var(--white);
+  font-weight: bold;
+  border-radius: var(--borderRadius);
+  padding: 10px 15px;
+  margin: 10px;
+  z-index: 100;
+  border: 3px solid var(--white);
+  transform: translateY(-500%);
+}
+
+.skip-to-content-link:focus {
+  transform: translateY(0%);
+}
+
+/* <a className='skip-to-content-link' href='#skip-target'>
+        Skip to content
+      </a> */

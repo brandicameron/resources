@@ -1,0 +1,39 @@
+.container {
+  padding: 0.55rem 1.5rem;
+  border-bottom: 4px solid var(--textColor);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeIcon {
+  width: 35px;
+  height: 40px;
+}
+
+.navigation a {
+  font-weight: var(--bold);
+  font-size: var(--med);
+  transition: 150ms linear;
+}
+
+.navigation li a:hover {
+  color: var(--primary);
+}
+
+.authButton {
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: var(--bold);
+  line-height: 1;
+  padding: 0.5rem 1rem 0.75rem 1rem;
+  border-radius: var(--borderRadius);
+  transition: 150ms linear;
+}
+
+.authButton:hover {
+  filter: brightness(1.1);
+}
