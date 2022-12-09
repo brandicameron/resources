@@ -60,14 +60,26 @@ export default function ResourceCard({ section }) {
           )}
           {section.category}
         </h2>
-        {loggedIn && (
-          <button
-            className={styles.editButton}
-            aria-label='Edit'
-            title='Edit'
-            onClick={handleShowDelete}
-          ></button>
-        )}
+        <div>
+          {loggedIn && (
+            <button
+              title='Add New Link'
+              onClick={handleOpenForm}
+              className={styles.addButton}
+              aria-label='Add a new link.'
+            >
+              +
+            </button>
+          )}
+          {loggedIn && (
+            <button
+              className={styles.editButton}
+              aria-label='Edit'
+              title='Edit'
+              onClick={handleShowDelete}
+            ></button>
+          )}
+        </div>
       </header>
       <ul className={styles.columns} style={{ columns: columnStyles() }}>
         {section.links &&
@@ -89,16 +101,6 @@ export default function ResourceCard({ section }) {
             </li>
           ))}
       </ul>
-      {loggedIn && (
-        <button
-          title='Add New Link'
-          onClick={handleOpenForm}
-          className={styles.addButton}
-          aria-label='Add a new link.'
-        >
-          +
-        </button>
-      )}
       {openForm && <AddLinkForm openForm={openForm} setOpenForm={setOpenForm} section={section} />}
     </article>
   );
