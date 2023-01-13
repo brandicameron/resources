@@ -61,7 +61,7 @@ export const copyCode = [
   {
     title: 'Safari bottom bar fix',
     code: `.container {
-      height: 100vh;
+      min-height: 100vh;
       max-height: -webkit-fill-available;
     }`,
   },
@@ -135,6 +135,11 @@ export const copyCode = [
       padding: 8px;
       margin: 10px 0;
     }`,
+  },
+  {
+    title: 'Time (ex: 2:25 PM)',
+    code: `const time = new Date().toLocaleTimeString()
+    .replace(/(.*)\D\d+/, "$1");`,
   },
   {
     title: 'Next.js Lang',
