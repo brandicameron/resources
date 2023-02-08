@@ -62,7 +62,7 @@ export const copyCode = [
     title: 'Safari bottom bar fix',
     code: `.container {
       min-height: 100vh;
-      max-height: -webkit-fill-available;
+      min-height: -webkit-fill-available;
     }`,
   },
   {
@@ -86,7 +86,7 @@ export const copyCode = [
     code: `box-shadow: 2.5rem 3.75rem 3rem -3rem rgba(0 0 0 / 30%);`,
   },
   {
-    title: 'Background Gradient',
+    title: 'Linear Gradient',
     code: `background: linear-gradient(to right, #fc0e1b, #cd27fb);`,
   },
   {
@@ -152,11 +152,15 @@ export const copyCode = [
       };`,
   },
   {
-    title: 'Self Host Font',
+    title: '@font-face',
     code: `@font-face {
-      font-family: {Create a Font Name};
-      src: url(../font/{Font File});
-    }`,
+  font-family: "Inter";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Inter-Regular"),
+    url("") format("woff2"),
+    url("") format("woff");
+}`,
   },
   {
     title: 'Add class when map()',

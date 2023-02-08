@@ -33,16 +33,18 @@ export default function ResourceCard({ section }) {
   };
 
   const columnStyles = () => {
-    if (section.links.length <= 6) {
-      return 'none';
-    }
+    if (section.links) {
+      if (section.links.length <= 6) {
+        return 1;
+      }
 
-    if (section.links.length >= 7 && section.links.length <= 17) {
-      return 2;
-    }
+      if (section.links.length >= 7 && section.links.length <= 17) {
+        return 2;
+      }
 
-    if (section.links.length >= 18) {
-      return 3;
+      if (section.links.length >= 18) {
+        return 3;
+      }
     }
   };
 
