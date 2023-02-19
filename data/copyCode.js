@@ -198,4 +198,35 @@ export const copyCode = [
     }
     `,
   },
+  {
+    title: 'Fetch Hook with Async',
+    code: `import { useState, useEffect } from "react";
+
+    export function useFetchData(url) {
+      const [data, setData] = useState([]);
+      const [loading, setLoading] = useState(false);
+    
+      useEffect(() => {
+        const fetchData = async () => {
+          setLoading(true);
+    
+          const response = await fetch(url);
+    
+          if (!response.ok) {
+            throw new Error("Error status: " + response.status);
+          }
+    
+          const data = await response.json();
+    
+          setData(data);
+          setLoading(false);
+        };
+    
+        fetchData();
+      }, []);
+    
+      return { data, loading };
+    }
+    `,
+  },
 ];
