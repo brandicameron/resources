@@ -229,4 +229,8 @@ export const copyCode = [
     }
     `,
   },
+  {
+    title: 'Random UUID - Built-in Browser Method',
+    code: `crypto.randomUUID()`,
+  },
 ];
